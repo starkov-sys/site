@@ -1,0 +1,848 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*after{
+	moz-box-sizing:border-box;
+	webkit-box-sizing:border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus, a: active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width:100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust:100%;
+	-moz-text-size-adjust:100%
+	-webkit-box-size-adjust:100%;
+}
+input,button,textarea{font-family: inherit;}
+
+input:-ms-clear{display:none;}
+button:{cursor: pointer;}
+button:-mz-focus-inner {padding: 0; border: 0;}
+a, a:visited {text-decoration: none;}
+a:inshover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
+
+/*--------------*/
+
+html,body{
+	height: 100%;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	background-color: #e56976;
+	}
+/*Стили для демонстрации*/
+
+.wrapper{}
+
+/*Основные стили*/
+
+.conteiner{
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 4;
+	
+	
+	
+}
+.header:before{
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 150px;
+	background-color: #e56976;
+	z-index: 2;
+}
+.header__body {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	max-height: 150px;
+	align-items: center;
+	z-index:3;
+}
+.header__logo {
+	z-index: 3;
+	display: inline-flex;
+	margin: 30px 0 0 30px;
+
+}
+.name{
+	font-family: Neucha;
+	margin: 0 0 0 30px;
+	font-size: 30px;
+	color: #fff;
+	max-width: 100px;
+	
+}
+.logo{
+	margin: 0 0 20px 0;
+	
+}
+.logo img{
+	max-width: 80px;
+	border-radius: 50%;
+
+}
+
+.header_contacts{
+	position: absolute;
+	left: 400px;
+	font-family: Neucha;
+	z-index: 3;
+	
+}
+.tel_number{
+	display: block;
+	font-size: 30px;
+	margin: 0 0 10px 0;
+	color: #fff;
+	
+}
+.work_time{
+	display: block;
+	font-size: 20px;
+}
+
+.tel_icons{
+	display: none;
+}
+
+.header__burger {
+display: none;
+}
+
+.header__menu {
+	position: relative;
+	margin: 20px 0 0 0;
+}
+
+
+.header_list {
+
+	font-family: Neucha;
+	display: flex;
+	
+	z-index: 2;
+	margin: 0 40px 0 0;
+	
+}
+
+.header_list li{
+position: relative;
+line-height: none;
+margin: 10px 20px 0 0;
+}
+
+
+.header_list li:hover{
+	
+	background-color: #5C1B36;
+	box-shadow: 0 0 10px rgba(0,0,0,0.7);
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.button:hover{
+	background-color: rgba(0,0,0,0.6);
+	border-radius: 10px;
+	padding: 10px;
+	box-shadow: 0 0 20px #5C1B36 ;
+}
+.header_link {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 20px;
+	text-decoration: none;
+}
+.button{
+	display: block;
+	margin: 0 50px 0 0;
+	padding: 10px;
+	text-transform: uppercase;
+	font-size: 30px;
+	
+}
+
+.button__link{
+	color: #fff;
+}
+
+.content {
+	padding: 55px 0 0 0;
+	background-color: #fff;
+}
+
+.content_text{
+	font-size: 18px;
+	line-height: 25px;
+}
+.content_text p{
+	margin: 0 0 20px 0;
+}
+.text {}
+
+
+
+@media(max-width: 1420px){
+
+
+	.header:before{
+		content: '';
+		height: 130px;
+	}
+	body.lock{
+		overflow: hidden;
+	}
+	.header__body {
+		height: 20px;
+		padding: 30px 0 0 0;
+	}
+	
+	
+	.header__logo img{
+	overflow: hidden;
+
+	}
+	.header__logo {
+	font-size: 30px;
+	flex: 0 0 30px;
+	margin: 80px 0 0 10px;
+	position: relative;
+	z-index: 3;
+   }
+
+   .header_contacts{
+   display: block;
+	font-family: Neucha;
+	z-index: 3;
+	margin: 70px 0 0 0;
+ }
+	.tel_number{
+	
+	font-size: 30px;
+	margin: 0 0 10px 0;
+	color: #fff;
+	
+    }
+	.work_time{
+	display: block;
+	font-size: 20px;
+ }
+ 	.tel_icons{
+	display: none;
+	}
+
+	.header__burger{
+	display: block;
+	position: relative;
+	width: 70px;
+	height: 50px;
+	position: relative;
+	z-index: 4;
+	margin: 50px 10px 0 0;
+	}
+   .header__burger span{
+   	border-radius: 20%;
+   	position: absolute;
+   	background-color: #fff;
+   	left: 0;
+   	width: 100%;
+   	height: 7px;
+   	top: 20px;
+   	transition: all 0.5s;
+   }
+	.header__burger:before,
+	.header__burger:after{
+		content: '';
+		border-radius: 20%;
+		background-color:  #fff;
+		position: absolute;
+		width: 100%;
+		height: 7px;
+		transition: all 0.5s;
+	}
+	.header__burger:before{
+		top: 0;
+	}
+	.header__burger:after{
+		bottom: 0;
+	}
+	.header__burger.active:before{
+		transform: rotate(45deg);
+		top: 42%;
+	}
+
+	.header__burger.active:after{
+		transform: rotate(-45deg);
+		bottom: 42%;
+	}
+	.header__burger.active span{
+		transform: scale(0);
+	}
+
+	.header__menu {
+		position: fixed;
+		top: -100%;
+		left: 0;
+		width: 100%;
+		height: 30%;
+		overflow: auto;
+		background-color: #e56976;
+		padding: 0px 20px 20px 20px;
+		margin: -10px 0 0 0;
+		transition: all 0.6s;
+		z-index: 3;
+	}
+
+	.header__menu.active{
+		top: 0;
+	}
+	.header_list{
+		display: block;
+		margin: 20px 0 0px 0;
+	}
+
+	.button{
+		margin: 0 0 0 -10px;
+	}
+
+	.header_list li{
+		margin: 0px 0 20px 0;
+	}
+	.header_list li:hover{
+	display: inline-block;
+	background-color: #5C1B36;
+	box-shadow: 0 0 10px rgba(0,0,0,0.7);
+	border-radius: 10px;
+	padding: 10px;
+	}
+
+	.button:hover{
+	display: inline-block;
+	background-color: rgba(0,0,0,0.6);
+	border-radius: 10px;
+	padding: 10px;
+	box-shadow: 0 0 20px #5C1B36;
+	}
+
+
+}
+
+@media(max-width: 750px){
+
+
+	.header:before{
+		height: 135px;
+	}
+	body.lock{
+		overflow: hidden;
+	}
+	.header__body {
+		height: 50px;
+
+	}
+	
+	
+	.header__logo img{
+	max-width: 80px;
+
+	}
+	.header__logo {
+	display: flex;
+	flex: 0 0 30px;
+	margin: 30px 0 0 10px;
+	position: relative;
+	z-index: 3;
+   }
+
+   .logo{
+   	margin: 20px 20px 0 0;
+   }
+   .name{
+
+   	font-size: 25px;
+   	margin: 20px 0 0 0px
+   }
+
+   .header_contacts{
+   
+	font-family: Neucha;
+	z-index: 3;
+	margin: 60px 0px 0 -80px;
+ }
+	.tel_number{
+	
+	font-size: 30px;
+	margin: 0 0 10px 0;
+	color: #fff;
+	
+    }
+	.work_time{
+	display: block;
+	font-size: 20px;
+ }
+
+ 	.tel_icons{
+	display: none;
+	}
+
+	.header__burger{
+	display: block;
+	position: relative;
+	width: 70px;
+	height: 50px;
+	position: relative;
+	z-index: 4;
+	margin: 50px 10px 0 0;
+	}
+   .header__burger span{
+   	border-radius: 20%;
+   	position: absolute;
+   	background-color: #fff;
+   	left: 0;
+   	width: 100%;
+   	height: 7px;
+   	top: 20px;
+   	transition: all 0.5s;
+   }
+	.header__burger:before,
+	.header__burger:after{
+		content: '';
+		border-radius: 20%;
+		background-color:  #fff;
+		position: absolute;
+		width: 100%;
+		height: 7px;
+		transition: all 0.5s;
+	}
+	.header__burger:before{
+		top: 0;
+	}
+	.header__burger:after{
+		bottom: 0;
+	}
+	.header__burger.active:before{
+		transform: rotate(45deg);
+		top: 42%;
+	}
+
+	.header__burger.active:after{
+		transform: rotate(-45deg);
+		bottom: 42%;
+	}
+	.header__burger.active span{
+		transform: scale(0);
+	}
+
+	.header__menu {
+		position: fixed;
+		top: -100%;
+		left: 0;
+		width: 100%;
+		height: 30%;
+		overflow: auto;
+		background-color: #e56976;
+		padding: 0px 20px 20px 20px;
+		transition: all 0.5s;
+		z-index: 3;
+		
+	}
+	.header__menu.active{
+		top: 0;
+	}
+	.header_list{
+		display: block;
+	}
+	.header_list li{
+		margin: 0px 0 20px 0;
+	}
+	.content{
+		padding: 65px 0 0 0;
+	}
+
+}
+
+
+@media(max-width: 640px){
+
+
+	.header:before{
+		height: 130px;
+	}
+	body.lock{
+		overflow: hidden;
+	}
+	.header__body {
+
+	}
+	
+	
+	.header__logo img{
+	max-width: 70px;
+
+	}
+	.header__logo {
+	display: flex;
+	
+	flex: 0 0 30px;
+	margin: 0px 0 0 10px;
+	position: relative;
+	z-index: 3;
+   }
+
+   .logo{
+   	margin: 30px 0 0 0;
+   }
+   .name{
+   	font-size: 25px;
+   	margin: 25px 0 0 20px
+   }
+
+   .header_contacts{ 
+
+  	margin: 20px 0 0 -170px;
+ }
+	.tel_number{
+		font-size: 25px;
+    }
+	.work_time{
+		font-size: 20px;
+ }
+ 	.tel_icons{
+	display: none;
+}
+
+	.header__burger{
+	display: block;
+	position: relative;
+	width: 60px;
+	height: 40px;
+	position: relative;
+	z-index: 4;
+	margin: 20px 10px 0 0;
+	}
+   .header__burger span{
+   	border-radius: 20%;
+   	position: absolute;
+   	background-color: #fff;
+   	left: 0;
+   	width: 100%;
+   	height: 7px;
+   	top: 16px;
+   	transition: all 0.5s;
+   }
+	.header__burger:before,
+	.header__burger:after{
+		content: '';
+		border-radius: 20%;
+		background-color:  #fff;
+		position: absolute;
+		width: 100%;
+		height: 7px;
+		transition: all 0.5s;
+	}
+	.header__burger:before{
+		top: 0;
+	}
+	.header__burger:after{
+		bottom: 0;
+	}
+	.header__burger.active:before{
+		transform: rotate(45deg);
+		top: 42%;
+	}
+
+	.header__burger.active:after{
+		transform: rotate(-45deg);
+		bottom: 42%;
+	}
+	.header__burger.active span{
+		transform: scale(0);
+	}
+
+	.header__menu {
+		position: fixed;
+		top: -100%;
+		left: 0;
+		width: 100%;
+		height: 25%;
+		overflow: auto;
+		background-color: #e56976;
+		padding: 0px 20px 20px 20px;
+		transition: all 0.5s;
+		z-index: 3;
+		
+	}
+	.header__menu.active{
+		top: 0;
+	}
+	.header_list{
+		display: block;
+	}
+	.header_list li{
+		margin: 0px 0 20px 0;
+	}
+	.content{
+		padding: 65px 0 0 0;
+	}
+
+}
+
+
+@media(max-width: 500px){
+
+
+	.header:before{
+		height: 100px;
+
+	}
+	body.lock{
+		overflow: hidden;
+	}
+	.header__body {
+	
+	}
+	
+	
+	.header__logo img{
+	max-width: 50px;
+
+	}
+	.header__logo {
+	display: flex;
+	
+	flex: 0 0 30px;
+	margin: 0 0 20px 0px;
+	position: relative;
+	z-index: 3;
+   }
+
+   .logo{
+   	margin: 30px 0 0 0;
+   }
+   .name{
+   	font-size: 20px;
+   	margin: 25px 0 0 20px
+   }
+
+   .header_contacts{ 
+
+   
+ }
+	.tel_number{
+		display: none;
+    }
+	.work_time{
+		display: none;
+ }
+ 	.tel_icons{
+ 	display: inline-block;
+	z-index: 4;
+	
+
+}
+
+	.tel_icons img{
+		max-width: 50px;
+		margin: 0 0 20px -50px;
+	}
+
+	.header__burger{
+	display: block;
+	position: relative;
+	width: 60px;
+	height: 40px;
+	position: relative;
+	z-index: 4;
+	margin: 0px 10px 0 0;
+	}
+   .header__burger span{
+   	border-radius: 20%;
+   	position: absolute;
+   	background-color: #fff;
+   	left: 0;
+   	width: 100%;
+   	height: 7px;
+   	top: 16px;
+   	transition: all 0.5s;
+   }
+	.header__burger:before,
+	.header__burger:after{
+		content: '';
+		border-radius: 20%;
+		background-color:  #fff;
+		position: absolute;
+		width: 100%;
+		height: 7px;
+		transition: all 0.5s;
+	}
+	.header__burger:before{
+		top: 0;
+	}
+	.header__burger:after{
+		bottom: 0;
+	}
+	.header__burger.active:before{
+		transform: rotate(45deg);
+		top: 42%;
+	}
+
+	.header__burger.active:after{
+		transform: rotate(-45deg);
+		bottom: 42%;
+	}
+	.header__burger.active span{
+		transform: scale(0);
+	}
+
+	.header__menu {
+		position: fixed;
+		top: -100%;
+		left: 0;
+		width: 100%;
+		height: 25%;
+		overflow: auto;
+		background-color: #e56976;
+		padding: 0px 20px 20px 20px;
+		transition: all 0.5s;
+		z-index: 3;
+		
+	}
+	.header__menu.active{
+		top: 0;
+	}
+	.header_list{
+		display: block;
+	}
+	.header_list li{
+		margin: 0px 0 20px 0;
+	}
+	.content{
+		padding: 38px 0 0 0;
+	}
+
+}
+
+
+/* Слайдер */
+.slick-slider{
+	margin: 62px 0 0 0;
+	
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list {
+	overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+	display: flex;
+	align-items: flex-start;
+	
+	
+}
+
+.slider_item {
+	text-align: center;
+}
+/* Слайд */
+.slick-slide{}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.slick-arrow{}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+
+/* Точки (булиты) */
+.slick-dots{}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{}
+/* Элемент точки */
+.slick-dots li button{}
+
+/*Конкретный слайдер*/
+.slider{
+	position: relative;
+}
+.slider .slick-arrow{
+	position: absolute;
+	top: 50%;
+	z-index: 10;
+	font-size: 0;
+	width: 100px;
+	height: 100px;
+	
+}
+.slider .slick-arrow.slick-prev{
+	left: 0;
+	background: url(../img/arrow-right.svg) 0 0/ 70% no-repeat;
+	transform: rotate(180deg);
+
+}
+.slider .slick-arrow.slick-next{
+	right: 0;
+	background: url(../img/arrow-right.svg) 0 0/ 70% no-repeat;
+}
+
+
+/* Точки (булиты) */
+.slider .slick-dots{
+	display: flex;
+	text-align: center;
+	justify-content: center;
+}
+.slider .slick-dots li.slick-active button{
+background-color: transparent;
+border: 1px solid #e56976;
+}
+.slider .slick-dots li{
+	list-style: none;
+	margin: 0px 10px;
+}
+/* Активная точка */
+.slider .slick-dots li.slick-active{}
+/* Элемент точки */
+.slider .slick-dots li button{
+	font-size: 0;
+	width: 10px;
+	height: 10px;
+	background-color: #98736a;
+	border-radius: 50%;
+}
+
